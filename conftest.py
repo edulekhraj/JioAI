@@ -12,8 +12,8 @@ from utils.config_reader import get_base_url
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get(get_base_url())
     driver.implicitly_wait(10)
+    driver.get(get_base_url())
     yield driver
     driver.quit()
 
@@ -34,12 +34,12 @@ def pytest_runtest_makereport(item):
     report = outcome.get_result()
 
     if report.when == "call" and report.failed:
-        driver = item.funcargs['driver']
+        driver = item.funcargs.get("driver")
 
         screenshot = driver.get_screenshot_as_png()
 
         allure.attach(
             screenshot,
-            name="failure_screenshot",
+            name="item.name",
             attachment_type=allure.attachment_type.PNG
         )

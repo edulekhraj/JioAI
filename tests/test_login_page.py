@@ -36,8 +36,13 @@ class TestLoginPage:
         assert 'grievance.officer@jio.com' in driver.page_source
         time.sleep(5)  # wait added purposefully to view the page in UI
 
-    @pytest.mark.smokee
+    @pytest.mark.smoke
     def test_OTP_login(self, driver, base):
         base.login_page.login_wit_OTP(8660301503, 123456)
         assert driver.find_element(By.CSS_SELECTOR, "[class='sc-cZsuCz ijcQcq']").is_displayed()
         time.sleep(5)  # wait added purposefully to view the page in UI
+
+    @pytest.mark.smoke
+    def test_banner_in_login_page(self, base):
+        base.login_page.banner_in_login_page()
+

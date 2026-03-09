@@ -28,3 +28,9 @@ class BasePage:
         )
 
         return element.text
+
+    def wait_for_element_visibility(self, locator):
+        return WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(locator)
+        )
+

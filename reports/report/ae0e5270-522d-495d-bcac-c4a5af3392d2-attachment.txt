@@ -1,0 +1,5 @@
+[33mWARNING [0m selenium.webdriver.common.selenium_manager:selenium_manager.py:151 Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+[32mINFO    [0m AutomationLogger:base_page.py:20 Entering value in ('css selector', "[placeholder='Enter your mobile number']")
+[32mINFO    [0m AutomationLogger:base_page.py:14 Clicking element: ('xpath', "//span[text()='Sign in with Password']")
+[32mINFO    [0m AutomationLogger:base_page.py:20 Entering value in ('name', 'password')
+[32mINFO    [0m AutomationLogger:base_page.py:14 Clicking element: ('xpath', "//span[text()='Continue']")
