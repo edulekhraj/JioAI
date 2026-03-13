@@ -1,4 +1,0 @@
-[32mINFO    [0m AutomationLogger:base_page.py:20 Entering value in ('css selector', "[placeholder='Enter your mobile number']")
-[32mINFO    [0m AutomationLogger:base_page.py:14 Clicking element: ('xpath', "//span[text()='Continue with OTP']")
-[32mINFO    [0m AutomationLogger:base_page.py:20 Entering value in ('id', 'otp-0')
-[32mINFO    [0m AutomationLogger:base_page.py:14 Clicking element: ('xpath', "//span[text()='Verify OTP']")
