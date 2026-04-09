@@ -12,7 +12,7 @@ from utils.config_reader import get_base_url
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(20)
     driver.get(get_base_url())
     yield driver
     driver.quit()

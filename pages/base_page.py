@@ -34,3 +34,7 @@ class BasePage:
             EC.visibility_of_element_located(locator)
         )
 
+    def wait_for_all_elements_visibility(self, locator):
+        return WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_all_elements_located(locator))
+

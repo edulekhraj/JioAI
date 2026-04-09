@@ -82,3 +82,11 @@ class TestProfileMenu:
         base.profile_menu.sign_out_menu()
         assert 'login' in driver.current_url
 
+    @pytest.mark.smoke
+    @pytest.mark.profile_menu
+    def test_click_profile_edit(self, driver, base):
+        base.profile_menu.profile_edit()
+        time.sleep(2)
+        actual_mobile = base.profile_menu.get_mobile_number()
+        assert actual_mobile == self.user
+

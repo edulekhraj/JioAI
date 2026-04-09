@@ -67,9 +67,11 @@ class LoginPage(BasePage):
         time.sleep(5)
     def terms_of_use(self):
         self.click(self.TOS)
+        self.driver.switch_to.window(self.driver.window_handles[1])
 
     def privacy_policy(self):
         self.click(self.PRIVACY_POLICY)
+        self.driver.switch_to.window(self.driver.window_handles[1])
 
     def login_wit_OTP(self, username, OTP):
         OTP = str(OTP)

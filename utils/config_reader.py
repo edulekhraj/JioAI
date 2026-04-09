@@ -18,3 +18,7 @@ def username():
 
 def password():
     return config.get("DEFAULT", "password")
+
+
+def course_completed_user():
+    return config.get("DEFAULT", "course_completed_user")
