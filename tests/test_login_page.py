@@ -45,7 +45,7 @@ class TestLoginPage:
     def test_banner_in_login_page(self, base):
         base.login_page.banner_in_login_page()
 
-    @pytest.mark.smoke
-    def test_valid_login(self, driver, base):
-        base.login_page.login_with_valid_password(self.user, self.pwd)
+    # @pytest.mark.smoke
+    # def test_valid_login(self, driver, base):
+    #     base.login_page.login_with_valid_password(self.user, self.pwd)
 

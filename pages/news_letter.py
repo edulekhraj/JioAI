@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
@@ -15,7 +17,6 @@ class NEWSLETTER(BasePage):
     NEWS_LETTER4 = (By.XPATH, "//div[@class='newsletter-grid']/div[4]/div[2]/h3")
     NEWS_LETTER5 = (By.XPATH, "//div[@class='newsletter-grid']/div[5]/div[2]/h3")
     NEWS_LETTER6 = (By.XPATH, "//div[@class='newsletter-grid']/div[6]/div[2]/h3")
-
 
     def redirection_to_news_letter_page(self):
         self.click(self.GO_BACK_BUTTON)
@@ -53,8 +54,13 @@ class NEWSLETTER(BasePage):
         title = self.get_text(self.NEWS_LETTER5)
         return title
 
-
-
+    def open_news_letter(self):
+        self.redirection_to_news_letter_page()
+        letter_count = self.driver.find_elements(By.XPATH, "//div[@class='newsletter-grid']/div/div[2]/button")
+        for i in range(1, len(letter_count)+1):
+            self.click(self.driver.find_element(By.XPATH, f"//div[@class='newsletter-grid']/div[{i}]/div[2]/button"))
+            time.sleep(5)
+            self.driver.switch_to.window(self.driver.window_handles[0])
 
 
 

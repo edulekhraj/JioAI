@@ -67,6 +67,7 @@ class CourseTOC(BasePage):
 
     def click_video_2(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.VIDEO2)
         self.click(self.RESUME_YES_BUTTON)
         self.click(self.RESUME_YES_BUTTON)
@@ -75,30 +76,35 @@ class CourseTOC(BasePage):
 
     def click_video_3(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.VIDEO3)
         self.click(self.RESUME_YES_BUTTON)
         self.resume_video_popup()
 
     def click_video_4(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.VIDEO4)
         self.click(self.RESUME_YES_BUTTON)
         self.resume_video_popup()
 
     def click_video_5(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.VIDEO5)
         self.click(self.RESUME_YES_BUTTON)
         self.resume_video_popup()
 
     def click_video_6(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.VIDEO6)
         self.click(self.RESUME_YES_BUTTON)
         self.resume_video_popup()
 
     def click_pdf1(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.PDF1)
         self.click(self.RESUME_YES_BUTTON)
         time.sleep(2)
@@ -106,6 +112,7 @@ class CourseTOC(BasePage):
 
     def click_pdf2(self):
         self.click_module_topics()
+        self.resume_video_popup()
         self.click(self.PDF2)
         self.click(self.RESUME_YES_BUTTON)
         time.sleep(2)
